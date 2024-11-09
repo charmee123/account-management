@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# React Account Management Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple account management application built with React (v16+) and React Router. The application allows users to create an account, log in, view and edit their account information. User data is stored in local storage.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup and Installation](#setup-and-installation)
+- [Project Structure](#project-structure)
+- [Usage](#usage)
+- [Code Explanation](#code-explanation)
+- [Screenshots](#screenshots)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Register**: Users can create a new account.
+**Login**: Registered users can log in with their email and password.
+**Account Management**: Users can view and edit their account information.
+**Logout**: After updating their account, users are redirected to the login page (simulating a logout).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+**React**: A JavaScript library for building user interfaces.
+**React Router v6**: For routing between pages.
+**React Toastify**: For toast notifications.
+**Bootstrap**: For basic styling and responsive design.
+**Local Storage**: Used to mock a backend by storing user data in the browser's local storage.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup and Installation
+1.  **Clone the repository**
+  
+   git clone https://github.com/your-username/react-account-management.git
+   cd react-account-management
 
-### `npm run build`
+2. **install dependencies**
+   npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Run the application**
+   npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project structure
+react-account-management/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Login.js
+│   │   ├── Register.js
+│   │   ├── Account.js
+│   ├── services/
+│   │   └── authService.js
+│   ├── styles/
+│   │   └── FormStyles.css
+│   ├── App.js
+│   ├── index.js
+│   └── README.md
+└── package.json
+**components/**: Contains the main form components (Login, Register, Account).
+**services/**: Contains authService.js, which handles authentication logic.
+**styles/**: Contains FormStyles.css for styling forms.
+**App.js**: Main application file where routes are set up.
+**index.js**: Entry point of the application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
+1. **Registration**
+ -Open the app, and you will be directed to the registration page by default.
+-Fill out the registration form with your email and password.
+-Submit the form to register your account.
+-Upon successful registration, you will be redirected to the account page.
 
-### `npm run eject`
+2. **Login**
+   -If you already have an account, click on the "Sign In" link at the bottom of the registration form.
+   -Enter your email and password to log in.
+   -Upon successful login, you will be redirected to your account page.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Account management**
+  -On the account page, you can view and edit your email and password.
+  -Click "Update" to save changes.
+  -After updating, you will be redirected to the login page (simulating a logout).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Code Explanation
+1. ## Components
+   **Login.js**: Provides a form for users to log in with their email and password. On success, users are redirected to the account page.
+  **Register.js**: Contains a registration form for new users to sign up. On success, users are redirected to the account page.
+  **Account.js**: Allows users to view and edit their account information. After updating, users are redirected to the login page.
+2. ## Service
+  **authService.js**: Handles authentication functions, such as registration, login, updating user data, and logout. Data is stored in local storage to simulate a backend   
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Screeshots
+**Login page**
+![image](https://github.com/user-attachments/assets/907b4f19-a91c-454d-82f4-bf5e00f96e38)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Register Page**
+![image](https://github.com/user-attachments/assets/2c7a624c-6307-4c96-b913-d667badfcbd7)
 
-## Learn More
+**Account Page**
+![image](https://github.com/user-attachments/assets/3a2b77ba-f39e-4db4-a124-edfca760ae2a)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
