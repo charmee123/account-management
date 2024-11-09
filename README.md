@@ -40,21 +40,8 @@ This is a simple account management application built with React (v16+) and Reac
    npm start
 
 ## Project structure
-react-account-management/
-├── public/
-├── src/
-│   ├── components/
-│   │   ├── Login.js
-│   │   ├── Register.js
-│   │   ├── Account.js
-│   ├── services/
-│   │   └── authService.js
-│   ├── styles/
-│   │   └── FormStyles.css
-│   ├── App.js
-│   ├── index.js
-│   └── README.md
-└── package.json
+![image](https://github.com/user-attachments/assets/fd42e494-6de2-4072-8edd-e095f94c6402)
+
 **components/**: Contains the main form components (Login, Register, Account).
 **services/**: Contains authService.js, which handles authentication logic.
 **styles/**: Contains FormStyles.css for styling forms.
@@ -63,10 +50,10 @@ react-account-management/
 
 ## Usage
 1. **Registration**
- -Open the app, and you will be directed to the registration page by default.
--Fill out the registration form with your email and password.
--Submit the form to register your account.
--Upon successful registration, you will be redirected to the account page.
+   -Open the app, and you will be directed to the registration page by default.
+  -Fill out the registration form with your email and password.
+  -Submit the form to register your account.
+  -Upon successful registration, you will be redirected to the account page.
 
 2. **Login**
    -If you already have an account, click on the "Sign In" link at the bottom of the registration form.
